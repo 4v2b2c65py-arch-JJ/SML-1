@@ -245,15 +245,17 @@ def gml_registry() -> str:
 
 @mcp.tool()
 def gml_video(seconds: float = 10.0, scale: float = 1.0,
-              store: bool = True) -> str:
+              store: bool = True, style: str = "") -> str:
     """Generate the GML-01 resonance video: each pipeline stage is a
     glowing node whose pulse is driven by its own label hash. Renders
     with OpenCV (avc1) and, when store=true, files it into the ATLAS
-    sorted store so it appears in the hub feed immediately."""
+    sorted store so it appears in the hub feed immediately.
+    style='feed' matches the palette/luma/tempo of the videos currently
+    in the ATLAS store (shortcut weights = dino nametag bindings)."""
     import json
     import gml_video as gv
     return json.dumps(gv.render(seconds=seconds, scale=scale,
-                                store=store), indent=1)
+                                store=store, style=style or None), indent=1)
 
 
 if __name__ == "__main__":
