@@ -133,6 +133,61 @@ def packet():
     }
 
 
+CF_REQ_SRC = """Cloudflare Tunnel
+    api_token <secret1.2
+    account_id <lookup1.2
+    zone_id <lookup1.2
+    hostname <chosen1.2
+    Shortcut
+        MCI1<CF1.2"""
+
+
+def cf_requirements() -> dict:
+    """GML packet for the 4 Cloudflare tunnel requirements.
+
+    Each field is a bound stage: api_token is a Cloudflare-issued
+    secret (cannot be model-generated), account_id/zone_id are
+    API-discoverable once a token exists, hostname is user-chosen
+    (default atlas.<zone>)."""
+    roots = parse(CF_REQ_SRC)
+    st = stages(roots)
+    return {
+        "spec": "CF-01",
+        "stream": "/".join(_spine(roots)),
+        "fields": {
+            "api_token": {"kind": "secret",
+                          "source": "Cloudflare dashboard -> API Tokens "
+                                    "(Account:Cloudflare Tunnel Edit + "
+                                    "Zone:DNS Edit)",
+                          "model_generatable": False},
+            "account_id": {"kind": "lookup",
+                           "source": "GET /accounts with api_token"},
+            "zone_id": {"kind": "lookup",
+                        "source": "GET /zones?account.id=<account_id>"},
+            "hostname": {"kind": "chosen",
+                         "source": "user pick, default atlas.<zone name>"},
+        },
+        "stages": st,
+        "shortcut": "CF1.2",
+        "note": "api_token is a Cloudflare-issued credential — no model "
+                "can mint it. The other three are derived via the "
+                "Cloudflare API once the token exists.",
+    }
+
+
+def _spine(roots):
+    path = []
+
+    def walk(n):
+        path.append(n["label"])
+        for c in n["children"]:
+            walk(c)
+
+    for r in roots:
+        walk(r)
+    return path
+
+
 def registry_entry():
     """GMR-style registry card for this spec."""
     p = packet()

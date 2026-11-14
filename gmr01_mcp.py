@@ -244,6 +244,16 @@ def gml_registry() -> str:
 
 
 @mcp.tool()
+def gml_cf_requirements() -> str:
+    """GML packet (CF-01) for the four Cloudflare named-tunnel
+    requirements: api_token (Cloudflare-issued secret), account_id and
+    zone_id (API-discoverable), hostname (user-chosen). Returns field
+    kinds, sources, and which are model-derivable."""
+    import json
+    return json.dumps(gml_spec.cf_requirements(), indent=1)
+
+
+@mcp.tool()
 def gml_video(seconds: float = 10.0, scale: float = 1.0,
               store: bool = True, style: str = "") -> str:
     """Generate the GML-01 resonance video: each pipeline stage is a
