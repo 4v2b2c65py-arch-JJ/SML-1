@@ -142,6 +142,7 @@ def web_search(query: str, lang: str = "en", max_results: int = 5) -> str:
 
 
 import gmr01_deep
+import gmr01_discover
 
 
 @mcp.tool()
@@ -186,6 +187,28 @@ def deep_embed_probe(chars: str, scope: str = "") -> str:
             out.append(f"  unresolved collisions: "
                        f"{rep['unresolved_collisions'][:5]}")
     return "\n".join(out)
+
+
+@mcp.tool()
+def auto_discover(term: str, lang: str = "en") -> str:
+    """Auto-discovery deep search for an unresolved GMR-01 term.
+
+    Runs the term's query variants across Wikipedia opensearch
+    (multilingual editions) + DuckDuckGo, scores by relevance, logs to
+    discovery_log.jsonl. Returns the top candidate sources.
+
+    DISCOVERY != VALIDATION: hits are candidate references for human
+    review — they do not define UNDEFINED symbols.
+    """
+    rec = gmr01_discover.discover_term(term, langs=("en", lang[:2]),
+                                     limit=5)
+    gmr01_discover.log_result(rec)
+    lines = [f"term='{term}' — {len(rec['hits'])} candidate hit(s)",
+             "(discovery is not validation)"]
+    for h in rec["hits"][:8]:
+        lines.append(f"- [{h['score']}] {h['title']}\n"
+                     f"  {h['url']}\n  {h['snippet'][:160]}")
+    return "\n".join(lines)
 
 
 if __name__ == "__main__":
