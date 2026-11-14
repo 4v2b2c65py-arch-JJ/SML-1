@@ -211,5 +211,37 @@ def auto_discover(term: str, lang: str = "en") -> str:
     return "\n".join(lines)
 
 
+import gml_spec
+
+
+@mcp.tool()
+def gml_parse() -> str:
+    """Parse the GML pipeline spec (preserved verbatim in gml_spec.SRC)
+    into its indentation tree. Returns stage count, depth map, and the
+    ordered spine."""
+    roots = gml_spec.parse()
+    flat = gml_spec.stages()
+    lines = [f"GML-01 spec: {len(flat)} stages, {len(roots)} roots",
+             f"sha256_16={gml_spec.packet()['integrity']['sha256']}"]
+    for n in flat:
+        lines.append("  " * n["depth"] + f"[{n['depth']}] {n['label']}")
+    return "\n".join(lines)
+
+
+@mcp.tool()
+def gml_emit() -> str:
+    """Emit the GML spec as a stream path + return packet: compression
+    ops, python-op markers, and <name1.2> version bindings extracted."""
+    import json
+    return json.dumps(gml_spec.packet(), indent=1)
+
+
+@mcp.tool()
+def gml_registry() -> str:
+    """GMR-style registry card for the integrated GML-01 spec."""
+    import json
+    return json.dumps(gml_spec.registry_entry(), indent=1)
+
+
 if __name__ == "__main__":
     mcp.run()  # stdio transport

@@ -1,8 +1,8 @@
 {
   "mcpServers": {
     "gmr01-lexicon": {
-      "command": "/Users/jjmarte/Documents/bitlengh/.venv/bin/python",
-      "args": ["/Users/jjmarte/Documents/bitlengh/gmr01_mcp.py"]
+      "command": "/Users/jjmarte/Documents/ATLAS/.venv/bin/python",
+      "args": ["/Users/jjmarte/Documents/ATLAS/gml/SML-1/gmr01_mcp.py"]
     }
   }
 }
