@@ -188,6 +188,39 @@ def _spine(roots):
     return path
 
 
+AUTO_SRC = """Automation
+    add 1 <rule1.2
+    loop python
+        counter ^ 1 6py|l
+    Shortcut
+        MCI1<auto1.2"""
+
+
+def auto_packet(counter: int = 0) -> dict:
+    """AUTO-01 spec packet: the 'add 1' rule applied to a persistent
+    counter. Each tick increments and re-binds the auto1.2 pin."""
+    roots = parse(AUTO_SRC)
+    flat = []
+
+    def walk(n):
+        flat.append(_analyze(n))
+        for c in n["children"]:
+            walk(c)
+
+    for r in roots:
+        walk(r)
+    nxt = counter + 1
+    return {
+        "spec": "AUTO-01",
+        "rule": "add 1",
+        "counter": nxt,
+        "stream": "/".join(_spine(roots)),
+        "stages": flat,
+        "bindings": {"auto1.2": f"tick#{nxt}"},
+        "dino_nametags": {"MCI1<auto1.2": ["auto1.2"]},
+    }
+
+
 def registry_entry():
     """GMR-style registry card for this spec."""
     p = packet()
