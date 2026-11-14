@@ -243,5 +243,18 @@ def gml_registry() -> str:
     return json.dumps(gml_spec.registry_entry(), indent=1)
 
 
+@mcp.tool()
+def gml_video(seconds: float = 10.0, scale: float = 1.0,
+              store: bool = True) -> str:
+    """Generate the GML-01 resonance video: each pipeline stage is a
+    glowing node whose pulse is driven by its own label hash. Renders
+    with OpenCV (avc1) and, when store=true, files it into the ATLAS
+    sorted store so it appears in the hub feed immediately."""
+    import json
+    import gml_video as gv
+    return json.dumps(gv.render(seconds=seconds, scale=scale,
+                                store=store), indent=1)
+
+
 if __name__ == "__main__":
     mcp.run()  # stdio transport
