@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+feed/
+*.log
+frames.ring
+session_store.json
+demand_store.json
+quota_projects.json
+feed_state.json
+handoff_store.json
+cookies*.txt
+*.lead
+*.tmp
+.DS_Store

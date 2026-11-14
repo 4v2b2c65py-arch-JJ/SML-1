@@ -1,0 +1,34 @@
+================================================================
+GMR-01 SHELL TRACKER REPORT
+================================================================
+records=10 steps | parameters: n_nets=15 hash_mode=cand sigma=0.08 seed=7
+
+[1] PEER SEED LEDGER (deterministic, ensemble-keyed)
+    seeds reproducible across re-derivation: True
+    peer0: 1505754393
+    peer1: 2597231997
+    peer2: 3889093941
+    peer3: 734862048
+    peer4: 32620465
+    ... (15 peers total)
+
+[2] FIDELITY COLUMN (per-step signal lock)
+    mean fidelity: 1.000 | content-locked steps: 10/10
+
+[3] PARALLEL WORD COUNT (4 workers)
+    total words: 462 | distinct: 69
+    top 10: c(35), f(30), deep(24), row(21), col(21), signal(21), content(20), depth(20), density(20), label(20)
+
+[4] WORD/ACRONYMICAL ALPHABET
+    tokens: 33 (14 acronyms)
+    sample: f1-deep-mid-c523a, point, c523a, f1-deep-high-c523a, f3-deep-high-c7ddd, Z33, dot, c7ddd
+
+[5] QBUT SHEAR (quantum-inspired nibble pairs)
+    tokens per record: label + 2 qbit/remainder tokens
+    sample: ['q000f', 'rf']
+
+[6] LABEL ITERATION -> TOKEN OUTPUT
+    converged in 1 iteration(s) (fixed point)
+    labels: [0, 4, 8, 11, 13, 16, 13, 16, 13, 16]
+    token stream length: 30
+    first 20 tokens: [0, 'q000f', 'rf', 4, 'q0f0f', 'rf', 8, 'q000f', 'r0', 11, 'q0f00', 'r0', 13, 'q0f0f', 'r0', 16, 'q0f0f', 'rf', 13, 'q0f0f']

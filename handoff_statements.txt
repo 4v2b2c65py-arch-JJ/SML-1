@@ -1,0 +1,10 @@
+HANDOFF key=7fdfa2077f7a5ffa step=1 edge=0,1>2,3 sector=- arrow=point label=f1-deep-mid-c523a content=c523a fidelity=1.0
+HANDOFF key=4df663865015e9da step=2 edge=2,3>3,3 sector=Z33 arrow=dot label=f3-deep-high-c7ddd content=c7ddd fidelity=1.0
+HANDOFF key=0829e4fe6ffd1cae step=3 edge=3,3>0,2 sector=- arrow=point label=f0-mid-low-cc4c7 content=cc4c7 fidelity=1.0
+HANDOFF key=16fb9bebc541fe8f step=4 edge=0,2>1,0 sector=- arrow=point label=f3-shallow-mid-c9767 content=c9767 fidelity=1.0
+HANDOFF key=b0bf141d4fb54f0c step=5 edge=1,0>2,3 sector=- arrow=point label=f3-deep-low-c5e68 content=c5e68 fidelity=1.0
+HANDOFF key=f54e999483e2bdc5 step=6 edge=2,3>1,0 sector=- arrow=point label=f2-deep-high-cca99 content=cca99 fidelity=1.0
+HANDOFF key=274e94d9bfd21040 step=7 edge=1,0>2,3 sector=- arrow=point label=f3-deep-low-c5e68 content=c5e68 fidelity=1.0
+HANDOFF key=13bfb078c6f14bbf step=8 edge=2,3>1,0 sector=- arrow=point label=f2-deep-high-cca99 content=cca99 fidelity=1.0
+HANDOFF key=fbf497a2594fc13a step=9 edge=1,0>2,3 sector=- arrow=point label=f3-deep-low-c5e68 content=c5e68 fidelity=1.0
+HANDOFF key=9bbf7df5cb59bd2b step=10 edge=2,3>1,0 sector=- arrow=point label=f2-deep-high-cca99 content=cca99 fidelity=1.0

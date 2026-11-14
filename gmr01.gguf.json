@@ -1,0 +1,11 @@
+{
+  "file": "gmr01.gguf",
+  "format": "gguf",
+  "tensors": 1,
+  "vocab_size": 72,
+  "emb_dim": 16,
+  "arch": "gmr01",
+  "weights_trained": false,
+  "contents": "GMR-01 registry: alphabet, signal labels, content ids; deterministic hash embeddings",
+  "verify_name": "GMR-01 Glyph Mathematical Notation Registry"
+}

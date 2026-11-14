@@ -1,0 +1,82 @@
+================================================================
+GMR-01 SIGNAL DECODE — READABLE TRANSCRIPT
+================================================================
+Configuration : 15 network variants, 10 steps, hash_mode=cand, noise sigma=0.08
+Origin found  : row 0 col 1
+Decode score  : 3.202
+Path match    : YES — decoded path equals planted path
+Steps decoded : 10 of 10 planted
+
+----------------------------------------------------------------
+Step 01: row 0 col 1 -> row 2 col 3  [point arrow]
+         predicted signal: freq=0.3989 depth=0.8005 density=0.6247 content=c523a
+         label            : f1-deep-mid-c523a
+         observed signal : freq=0.3667 depth=0.716 density=0.7348 content=c523a  (label: f1-deep-high-c523a)
+         similarity       : 0.2048
+         word hint         : "f 1 deep mid c 523a" (~5.1)
+
+Step 02: row 2 col 3 -> row 3 col 3  [dot arrow, sector Z33]
+         predicted signal: freq=0.7746 depth=0.7655 density=0.8665 content=c7ddd
+         label            : f3-deep-high-c7ddd
+         observed signal : freq=0.9108 depth=0.6741 density=0.9504 content=c7ddd  (label: f3-deep-high-c7ddd)
+         similarity       : 0.0705
+         word hint         : "f 3 deep high c 7ddd" (~5.3)
+
+Step 03: row 3 col 3 -> row 0 col 2  [point arrow]
+         predicted signal: freq=0.2277 depth=0.6316 density=0.2631 content=cc4c7
+         label            : f0-mid-low-cc4c7
+         observed signal : freq=0.331 depth=0.6348 density=0.2614 content=cc4c7  (label: f1-mid-low-cc4c7)
+         similarity       : 0.4338
+         word hint         : "f 0 mid low cc 4c7" (~4.8)
+
+Step 04: row 0 col 2 -> row 1 col 0  [point arrow]
+         predicted signal: freq=0.9465 depth=0.0945 density=0.4295 content=c9767
+         label            : f3-shallow-mid-c9767
+         observed signal : freq=0.8895 depth=0.1026 density=0.604 content=c9767  (label: f3-shallow-mid-c9767)
+         similarity       : 0.0714
+         word hint         : "f 3 shallow mid c 9767" (~4.8)
+
+Step 05: row 1 col 0 -> row 2 col 3  [point arrow]
+         predicted signal: freq=0.8709 depth=0.887 density=0.3296 content=c5e68
+         label            : f3-deep-low-c5e68
+         observed signal : freq=0.8781 depth=0.8659 density=0.3861 content=c5e68  (label: f3-deep-mid-c5e68)
+         similarity       : 0.7491
+         word hint         : "f 3 deep low c 5e68" (~5.2)
+
+Step 06: row 2 col 3 -> row 1 col 0  [point arrow]
+         predicted signal: freq=0.7315 depth=0.9963 density=0.7315 content=cca99
+         label            : f2-deep-high-cca99
+         observed signal : freq=0.7493 depth=1.0 density=0.7077 content=cca99  (label: f2-deep-high-cca99)
+         similarity       : 0.9323
+         word hint         : "f 2 deep high cca 99" (~4.7)
+
+Step 07: row 1 col 0 -> row 2 col 3  [point arrow]
+         predicted signal: freq=0.8709 depth=0.887 density=0.3296 content=c5e68
+         label            : f3-deep-low-c5e68
+         observed signal : freq=0.8671 depth=0.933 density=0.4633 content=c5e68  (label: f3-deep-mid-c5e68)
+         similarity       : 0.2095
+         word hint         : "f 3 deep low c 5e68" (~5.2)
+
+Step 08: row 2 col 3 -> row 1 col 0  [point arrow]
+         predicted signal: freq=0.7315 depth=0.9963 density=0.7315 content=cca99
+         label            : f2-deep-high-cca99
+         observed signal : freq=0.7468 depth=1.0 density=0.5663 content=cca99  (label: f2-deep-mid-cca99)
+         similarity       : 0.1163
+         word hint         : "f 2 deep high cca 99" (~4.7)
+
+Step 09: row 1 col 0 -> row 2 col 3  [point arrow]
+         predicted signal: freq=0.8709 depth=0.887 density=0.3296 content=c5e68
+         label            : f3-deep-low-c5e68
+         observed signal : freq=0.9269 depth=1.0 density=0.3795 content=c5e68  (label: f3-deep-mid-c5e68)
+         similarity       : 0.2375
+         word hint         : "f 3 deep low c 5e68" (~5.2)
+
+Step 10: row 2 col 3 -> row 1 col 0  [point arrow]
+         predicted signal: freq=0.7315 depth=0.9963 density=0.7315 content=cca99
+         label            : f2-deep-high-cca99
+         observed signal : freq=0.8133 depth=0.7961 density=0.7191 content=cca99  (label: f3-deep-high-cca99)
+         similarity       : 0.0256
+         word hint         : "f 2 deep high cca 99" (~4.7)
+
+----------------------------------------------------------------
+Word hints are approximate decodes via wordninja + wordfreq (open-source). They are not part of the mathematical record.

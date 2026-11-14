@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "tolerances": {
+    "max_modification_weight": 10.0,
+    "protected_modules": ["bus", "kernel", "sessions", "constitution"],
+    "max_demands_per_session": 64,
+    "quota_budget_cap": 100.0
+  },
+  "counterweight_rules": {
+    "uneven_demand": {"quota_delta": -5.0, "attention_boost": 0.0},
+    "protected_module_touch": {"quota_delta": -25.0, "attention_boost": 2.0},
+    "over_demand_cap": {"quota_delta": -50.0, "attention_boost": 0.0}
+  }
+}
