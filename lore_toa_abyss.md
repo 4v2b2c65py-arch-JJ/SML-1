@@ -51,3 +51,21 @@ from Aselia Wiki, MAL, MangaDex, archive.org item
   episode list, Luke fon Fabre.
 - "hyperresonance fonon miasma…" and "Van Grants Eldrant…" → 0 hits
   via DDG/Wikipedia; fandom wiki is the authoritative source.
+
+## Appendix — Vanitas crossover context (2026-11-14)
+- TOA-01 spec's "Skill book" resolved to *The Case Study of Vanitas*
+  (Vanitas no Karte, Jun Mochizuki, Square Enux/Gangan Joker 2015–,
+  Yen Press EN; anime Bones 2021–22). The Book of Vanitas = cursed
+  clockwork grimoire, blue leather cover, jet-black pages, born of
+  the "Vampire of the Blue Moon", interferes with vampires' true
+  names. Noé Archiviste + Vanitas heal "malnomen" in 19th-c Paris.
+- Local artifacts: data/books/vanitas/ — ch001 KissManga CBZ (81pp
+  extracted to ch001_pages/), Yenpress c01 PDF (44pp, OCR text
+  layer), ep01.mp4 downloading (638MB archive.org item
+  copy-of-vanitas-no-karte-03).
+- Book-origin spread = Yenpress p9-11 ("THE BOOK OF VANITAS",
+  "A CLOCKWORK GRIMOIRE LINKED TO A SILVER...", blue moon birth).
+- manga_Vanitas_no_Shuki archive item: full run — v01-v02 tankobon,
+  011-020.5, c01-c11 Yenpress, ch001-013+ KissManga.
+- CV scan of 81 pages: blue-dominant = p1 (65%), p3 (28%) — title/
+  cover splashes; darkest spreads p41/68/69/81 (night/vampire beats).
